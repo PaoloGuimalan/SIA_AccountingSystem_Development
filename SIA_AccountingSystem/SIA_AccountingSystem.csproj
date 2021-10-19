@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -102,6 +106,12 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentLists.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentLists.Designer.cs">
+      <DependentUpon>StudentLists.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +154,9 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentLists.resx">
+      <DependentUpon>StudentLists.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentProfile.resx">
       <DependentUpon>StudentProfile.cs</DependentUpon>

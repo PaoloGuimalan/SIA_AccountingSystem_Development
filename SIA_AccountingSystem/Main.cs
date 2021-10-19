@@ -33,6 +33,7 @@ namespace SIA_AccountingSystem
         {
             maindash1.Show();
             accounting1.Hide();
+            studentLists1.Hide();
         }
 
         private void schcal_Click(object sender, EventArgs e)
@@ -71,12 +72,16 @@ namespace SIA_AccountingSystem
         {
             accounting1.Show();
             maindash1.Hide();
+            studentLists1.Hide();
         }
 
         private void stdnt_Click(object sender, EventArgs e)
         {
-            StudentProfile stp = new StudentProfile();
-            stp.Show();
+            //StudentProfile stp = new StudentProfile();
+            //stp.Show();
+            studentLists1.Show();
+            maindash1.Hide();
+            accounting1.Hide();
         }
     }
 }
