@@ -13,6 +13,12 @@ namespace SIA_AccountingSystem
 {
     public partial class StudentProfile : Form
     {
+        string ID_reciever;
+        public string ID
+        {
+            get { return ID_reciever; }
+        }
+
         private void Connection(string val_id)
         {
             string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
@@ -35,6 +41,8 @@ namespace SIA_AccountingSystem
         {
             InitializeComponent();
             Connection(stud_id_im);
+            ID_reciever = stud_id_im;
+            profileview1.ID = stud_id_im;
             //profileview1.ID = stud_id_im;
         }
 

@@ -34,7 +34,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.label18 = new System.Windows.Forms.Label();
+            this.view_semester_val = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.view_course_val = new System.Windows.Forms.Label();
@@ -47,10 +47,10 @@ namespace SIA_AccountingSystem
             this.label25 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.view_contact_val = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.view_emailadd_val = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.view_middlename_val = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.view_stud_id_val = new System.Windows.Forms.Label();
             this.view_stud_id = new System.Windows.Forms.Label();
+            this.load_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -136,15 +137,17 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel14, 0, 2);
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel15, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel16, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.load_btn, 0, 4);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(371, 0);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 5;
+            this.tableLayoutPanel10.RowCount = 6;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.14433F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.14433F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.14433F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.14433F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.42268F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(371, 388);
             this.tableLayoutPanel10.TabIndex = 1;
@@ -154,29 +157,29 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel13.ColumnCount = 2;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.Controls.Add(this.label18, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.view_semester_val, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.label19, 0, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(0, 153);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(0, 120);
             this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(371, 51);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(371, 40);
             this.tableLayoutPanel13.TabIndex = 3;
             // 
-            // label18
+            // view_semester_val
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label18.Location = new System.Drawing.Point(188, 16);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(34, 18);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "N/A";
+            this.view_semester_val.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.view_semester_val.AutoSize = true;
+            this.view_semester_val.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view_semester_val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.view_semester_val.Location = new System.Drawing.Point(188, 11);
+            this.view_semester_val.Name = "view_semester_val";
+            this.view_semester_val.Size = new System.Drawing.Size(34, 18);
+            this.view_semester_val.TabIndex = 2;
+            this.view_semester_val.Text = "N/A";
             // 
             // label19
             // 
@@ -184,7 +187,7 @@ namespace SIA_AccountingSystem
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label19.Location = new System.Drawing.Point(3, 16);
+            this.label19.Location = new System.Drawing.Point(3, 10);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(87, 19);
             this.label19.TabIndex = 1;
@@ -198,13 +201,13 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel14.Controls.Add(this.view_course_val, 0, 0);
             this.tableLayoutPanel14.Controls.Add(this.label21, 0, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 102);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 80);
             this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(371, 51);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(371, 40);
             this.tableLayoutPanel14.TabIndex = 2;
             // 
             // view_course_val
@@ -213,7 +216,7 @@ namespace SIA_AccountingSystem
             this.view_course_val.AutoSize = true;
             this.view_course_val.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.view_course_val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.view_course_val.Location = new System.Drawing.Point(188, 16);
+            this.view_course_val.Location = new System.Drawing.Point(188, 11);
             this.view_course_val.Name = "view_course_val";
             this.view_course_val.Size = new System.Drawing.Size(34, 18);
             this.view_course_val.TabIndex = 2;
@@ -225,7 +228,7 @@ namespace SIA_AccountingSystem
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label21.Location = new System.Drawing.Point(3, 16);
+            this.label21.Location = new System.Drawing.Point(3, 10);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(81, 19);
             this.label21.TabIndex = 1;
@@ -239,13 +242,13 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel15.Controls.Add(this.view_yearlevel_val, 0, 0);
             this.tableLayoutPanel15.Controls.Add(this.label23, 0, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 51);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 40);
             this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(371, 51);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(371, 40);
             this.tableLayoutPanel15.TabIndex = 1;
             // 
             // view_yearlevel_val
@@ -254,7 +257,7 @@ namespace SIA_AccountingSystem
             this.view_yearlevel_val.AutoSize = true;
             this.view_yearlevel_val.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.view_yearlevel_val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.view_yearlevel_val.Location = new System.Drawing.Point(188, 16);
+            this.view_yearlevel_val.Location = new System.Drawing.Point(188, 11);
             this.view_yearlevel_val.Name = "view_yearlevel_val";
             this.view_yearlevel_val.Size = new System.Drawing.Size(34, 18);
             this.view_yearlevel_val.TabIndex = 2;
@@ -266,7 +269,7 @@ namespace SIA_AccountingSystem
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label23.Location = new System.Drawing.Point(3, 16);
+            this.label23.Location = new System.Drawing.Point(3, 10);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(93, 19);
             this.label23.TabIndex = 1;
@@ -286,7 +289,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(371, 51);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(371, 40);
             this.tableLayoutPanel16.TabIndex = 0;
             // 
             // view_status_val
@@ -295,7 +298,7 @@ namespace SIA_AccountingSystem
             this.view_status_val.AutoSize = true;
             this.view_status_val.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.view_status_val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.view_status_val.Location = new System.Drawing.Point(188, 16);
+            this.view_status_val.Location = new System.Drawing.Point(188, 11);
             this.view_status_val.Name = "view_status_val";
             this.view_status_val.Size = new System.Drawing.Size(34, 18);
             this.view_status_val.TabIndex = 2;
@@ -307,7 +310,7 @@ namespace SIA_AccountingSystem
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label25.Location = new System.Drawing.Point(3, 16);
+            this.label25.Location = new System.Drawing.Point(3, 10);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(64, 19);
             this.label25.TabIndex = 1;
@@ -343,7 +346,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel9.ColumnCount = 2;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Controls.Add(this.label12, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.view_contact_val, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.label13, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 255);
@@ -355,17 +358,17 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel9.Size = new System.Drawing.Size(371, 51);
             this.tableLayoutPanel9.TabIndex = 5;
             // 
-            // label12
+            // view_contact_val
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(188, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 18);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "N/A";
+            this.view_contact_val.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.view_contact_val.AutoSize = true;
+            this.view_contact_val.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view_contact_val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.view_contact_val.Location = new System.Drawing.Point(188, 16);
+            this.view_contact_val.Name = "view_contact_val";
+            this.view_contact_val.Size = new System.Drawing.Size(34, 18);
+            this.view_contact_val.TabIndex = 2;
+            this.view_contact_val.Text = "N/A";
             // 
             // label13
             // 
@@ -384,7 +387,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.label10, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.view_emailadd_val, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 204);
@@ -396,17 +399,17 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel8.Size = new System.Drawing.Size(371, 51);
             this.tableLayoutPanel8.TabIndex = 4;
             // 
-            // label10
+            // view_emailadd_val
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(188, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(34, 18);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "N/A";
+            this.view_emailadd_val.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.view_emailadd_val.AutoSize = true;
+            this.view_emailadd_val.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view_emailadd_val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.view_emailadd_val.Location = new System.Drawing.Point(188, 16);
+            this.view_emailadd_val.Name = "view_emailadd_val";
+            this.view_emailadd_val.Size = new System.Drawing.Size(34, 18);
+            this.view_emailadd_val.TabIndex = 2;
+            this.view_emailadd_val.Text = "N/A";
             // 
             // label11
             // 
@@ -571,6 +574,7 @@ namespace SIA_AccountingSystem
             this.view_stud_id_val.Size = new System.Drawing.Size(34, 18);
             this.view_stud_id_val.TabIndex = 2;
             this.view_stud_id_val.Text = "N/A";
+            this.view_stud_id_val.Click += new System.EventHandler(this.view_stud_id_val_Click);
             // 
             // view_stud_id
             // 
@@ -583,6 +587,20 @@ namespace SIA_AccountingSystem
             this.view_stud_id.Size = new System.Drawing.Size(99, 19);
             this.view_stud_id.TabIndex = 1;
             this.view_stud_id.Text = "Student ID: ";
+            // 
+            // load_btn
+            // 
+            this.load_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.load_btn.BackColor = System.Drawing.Color.Lime;
+            this.load_btn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.load_btn.ForeColor = System.Drawing.Color.White;
+            this.load_btn.Location = new System.Drawing.Point(125, 185);
+            this.load_btn.Name = "load_btn";
+            this.load_btn.Size = new System.Drawing.Size(120, 30);
+            this.load_btn.TabIndex = 4;
+            this.load_btn.Text = "Load Data";
+            this.load_btn.UseVisualStyleBackColor = false;
+            this.load_btn.Click += new System.EventHandler(this.load_btn_Click);
             // 
             // Profileview
             // 
@@ -628,10 +646,10 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label view_contact_val;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label view_emailadd_val;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Label view_middlename_val;
@@ -647,7 +665,7 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.Label view_stud_id;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label view_semester_val;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private System.Windows.Forms.Label view_course_val;
@@ -658,5 +676,6 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.Label view_status_val;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button load_btn;
     }
 }
