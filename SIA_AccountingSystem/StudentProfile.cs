@@ -7,14 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SIA_AccountingSystem
 {
     public partial class StudentProfile : Form
     {
-        public StudentProfile()
+        private void Connection(string val_id)
+        {
+            string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
+            MySqlConnection DBConnect = new MySqlConnection(conn);
+
+            DBConnect.Open();
+            string query = $"SELECT * FROM students_list WHERE student_id = '{val_id}'";
+            MySqlCommand command1 = new MySqlCommand(query, DBConnect);
+            MySqlDataReader read1 = command1.ExecuteReader();
+            //MessageBox.Show(read1.GetString(0));
+            if(read1.Read())
+            {
+                stud_id.Text = "Student ID: " + read1.GetString(0);
+                //ID_main = read1.GetString(0);
+                stud_name.Text = read1.GetString(1) + ", " + read1.GetString(2) + ", " + read1.GetString(3);
+                DBConnect.Close();
+            }
+        }
+        public StudentProfile(string stud_id_im)
         {
             InitializeComponent();
+            Connection(stud_id_im);
+            //profileview1.ID = stud_id_im;
         }
 
         private void Profile_btn_Click(object sender, EventArgs e)
