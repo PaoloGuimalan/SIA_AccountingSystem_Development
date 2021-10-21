@@ -37,32 +37,32 @@ namespace SIA_AccountingSystem
             this.accnt = new System.Windows.Forms.Button();
             this.stdnt = new System.Windows.Forms.Button();
             this.logout = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.reg_name = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.maindash1 = new SIA_AccountingSystem.Maindash();
+            this.studentLists1 = new SIA_AccountingSystem.StudentLists();
             this.accounting1 = new SIA_AccountingSystem.Accounting();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.studentLists1 = new SIA_AccountingSystem.StudentLists();
             this.tableLayoutPanelmain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -110,7 +110,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel2.Controls.Add(this.stdnt, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.logout, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox6, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.reg_name, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
@@ -182,17 +182,29 @@ namespace SIA_AccountingSystem
             this.logout.UseVisualStyleBackColor = true;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
-            // label2
+            // pictureBox6
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(185, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "N/A";
+            this.pictureBox6.BackgroundImage = global::SIA_AccountingSystem.Properties.Resources.img_237553;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 20);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(400, 20);
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // reg_name
+            // 
+            this.reg_name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.reg_name.AutoSize = true;
+            this.reg_name.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reg_name.ForeColor = System.Drawing.Color.Gray;
+            this.reg_name.Location = new System.Drawing.Point(179, 54);
+            this.reg_name.Name = "reg_name";
+            this.reg_name.Size = new System.Drawing.Size(41, 22);
+            this.reg_name.TabIndex = 6;
+            this.reg_name.Text = "N/A";
             // 
             // panel1
             // 
@@ -205,6 +217,34 @@ namespace SIA_AccountingSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(436, 292);
             this.panel1.TabIndex = 1;
+            // 
+            // maindash1
+            // 
+            this.maindash1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.maindash1.Location = new System.Drawing.Point(0, 0);
+            this.maindash1.Margin = new System.Windows.Forms.Padding(0);
+            this.maindash1.Name = "maindash1";
+            this.maindash1.Size = new System.Drawing.Size(436, 292);
+            this.maindash1.TabIndex = 1;
+            this.maindash1.Load += new System.EventHandler(this.maindash1_Load);
+            // 
+            // studentLists1
+            // 
+            this.studentLists1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studentLists1.Location = new System.Drawing.Point(0, 0);
+            this.studentLists1.Margin = new System.Windows.Forms.Padding(0);
+            this.studentLists1.Name = "studentLists1";
+            this.studentLists1.Size = new System.Drawing.Size(436, 292);
+            this.studentLists1.TabIndex = 1;
+            // 
+            // accounting1
+            // 
+            this.accounting1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.accounting1.Location = new System.Drawing.Point(0, 0);
+            this.accounting1.Margin = new System.Windows.Forms.Padding(0);
+            this.accounting1.Name = "accounting1";
+            this.accounting1.Size = new System.Drawing.Size(436, 292);
+            this.accounting1.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
@@ -223,6 +263,28 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(836, 100);
             this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(836, 18);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 83);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(836, 17);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // tableLayoutPanel4
             // 
@@ -255,6 +317,18 @@ namespace SIA_AccountingSystem
             this.label1.Text = "ACCOUNTING DEPARTMENT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::SIA_AccountingSystem.Properties.Resources.qculogopng;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Location = new System.Drawing.Point(746, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(90, 65);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
@@ -271,71 +345,6 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(90, 65);
             this.tableLayoutPanel5.TabIndex = 3;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::SIA_AccountingSystem.Properties.Resources.img_237553;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 20);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(400, 20);
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            // 
-            // maindash1
-            // 
-            this.maindash1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maindash1.Location = new System.Drawing.Point(0, 0);
-            this.maindash1.Margin = new System.Windows.Forms.Padding(0);
-            this.maindash1.Name = "maindash1";
-            this.maindash1.Size = new System.Drawing.Size(436, 292);
-            this.maindash1.TabIndex = 1;
-            this.maindash1.Load += new System.EventHandler(this.maindash1_Load);
-            // 
-            // accounting1
-            // 
-            this.accounting1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.accounting1.Location = new System.Drawing.Point(0, 0);
-            this.accounting1.Margin = new System.Windows.Forms.Padding(0);
-            this.accounting1.Name = "accounting1";
-            this.accounting1.Size = new System.Drawing.Size(436, 292);
-            this.accounting1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(836, 18);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 83);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(836, 17);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::SIA_AccountingSystem.Properties.Resources.qculogopng;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Location = new System.Drawing.Point(746, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(90, 65);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -363,15 +372,6 @@ namespace SIA_AccountingSystem
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
             // 
-            // studentLists1
-            // 
-            this.studentLists1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.studentLists1.Location = new System.Drawing.Point(0, 0);
-            this.studentLists1.Margin = new System.Windows.Forms.Padding(0);
-            this.studentLists1.Name = "studentLists1";
-            this.studentLists1.Size = new System.Drawing.Size(436, 292);
-            this.studentLists1.TabIndex = 1;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,15 +385,15 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -423,7 +423,7 @@ namespace SIA_AccountingSystem
         private Maindash maindash1;
         private Accounting accounting1;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label reg_name;
         private StudentLists studentLists1;
     }
 }

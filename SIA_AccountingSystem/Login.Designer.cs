@@ -35,13 +35,13 @@ namespace SIA_AccountingSystem
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.log_reg_pass = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.log_reg_id = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2.SuspendLayout();
@@ -127,7 +127,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.25F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.75F));
             this.tableLayoutPanel4.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox2, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.log_reg_pass, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 306);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
@@ -150,13 +150,13 @@ namespace SIA_AccountingSystem
             this.label4.TabIndex = 3;
             this.label4.Text = "Password";
             // 
-            // textBox2
+            // log_reg_pass
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox2.Location = new System.Drawing.Point(108, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 20);
-            this.textBox2.TabIndex = 2;
+            this.log_reg_pass.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.log_reg_pass.Location = new System.Drawing.Point(108, 4);
+            this.log_reg_pass.Name = "log_reg_pass";
+            this.log_reg_pass.Size = new System.Drawing.Size(244, 20);
+            this.log_reg_pass.TabIndex = 2;
             // 
             // pictureBox2
             // 
@@ -201,7 +201,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.25F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.75F));
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.log_reg_id, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 279);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
@@ -224,13 +224,13 @@ namespace SIA_AccountingSystem
             this.label3.TabIndex = 0;
             this.label3.Text = "Registrar ID";
             // 
-            // textBox1
+            // log_reg_id
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(108, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 20);
-            this.textBox1.TabIndex = 1;
+            this.log_reg_id.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.log_reg_id.Location = new System.Drawing.Point(108, 3);
+            this.log_reg_id.Name = "log_reg_id";
+            this.log_reg_id.Size = new System.Drawing.Size(244, 20);
+            this.log_reg_id.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -290,13 +290,13 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox log_reg_pass;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox log_reg_id;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

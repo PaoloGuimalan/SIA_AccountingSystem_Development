@@ -7,15 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SIA_AccountingSystem
 {
     public partial class Main : Form
     {
+        private void Connection(string reciever_id)
+        {
+            string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
+            MySqlConnection DBConnect = new MySqlConnection(conn);
 
-        public Main()
+            DBConnect.Open();
+            string query = $"SELECT * FROM registrar_acc WHERE registrar_id = '{reciever_id}'";
+            MySqlCommand command1 = new MySqlCommand(query, DBConnect);
+            MySqlDataReader read1 = command1.ExecuteReader();
+
+            if (read1.Read())
+            {
+                reg_name.Text = read1.GetString(1) + " " + read1.GetString(3) + " " + read1.GetString(2);
+            }
+
+            DBConnect.Close();
+        }
+
+        public Main(string reg_id)
         {
             InitializeComponent();
+            Connection(reg_id);
         }
 
         private void logout_Click(object sender, EventArgs e)
