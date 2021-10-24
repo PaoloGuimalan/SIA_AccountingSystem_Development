@@ -22,6 +22,17 @@ namespace SIA_AccountingSystem
         private void Connection(string val_id)
         {
             string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
+
+            MySqlConnection DBPrice = new MySqlConnection(conn);
+
+            DBPrice.Open();
+            string queryprice = $"SELECT SUM(unit_price) FROM av_units WHERE unit_id IN (SELECT unit_id FROM units_assigned WHERE stud_id_units = '{val_id}' AND status = 'Unpaid')";
+            MySqlCommand commandprice = new MySqlCommand(queryprice, DBPrice);
+            MySqlDataReader readprice = commandprice.ExecuteReader();
+            readprice.Read();
+            price_box.Text = "Unpaid Invoice: P" + readprice.GetString(0);
+            DBPrice.Close();
+
             MySqlConnection DBConnect = new MySqlConnection(conn);
 
             DBConnect.Open();
@@ -43,6 +54,7 @@ namespace SIA_AccountingSystem
             Connection(stud_id_im);
             ID_reciever = stud_id_im;
             profileview1.ID = stud_id_im;
+            invoiceview1.ID = stud_id_im;
             //profileview1.ID = stud_id_im;
         }
 
@@ -56,6 +68,16 @@ namespace SIA_AccountingSystem
         {
             profileview1.Hide();
             invoiceview1.Show();
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void profileview1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

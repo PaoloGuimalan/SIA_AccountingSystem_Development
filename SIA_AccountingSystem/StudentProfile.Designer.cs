@@ -39,7 +39,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.price_box = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.Profile_btn = new System.Windows.Forms.Button();
@@ -97,6 +97,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(800, 65);
             this.tableLayoutPanel4.TabIndex = 2;
+            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
             // 
             // pictureBox3
             // 
@@ -195,7 +196,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.price_box, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
@@ -222,20 +223,20 @@ namespace SIA_AccountingSystem
             this.label2.Text = "Student Profile";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // price_box
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
-            this.textBox1.Location = new System.Drawing.Point(50, 69);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(347, 60);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Unpaid Invoice:";
+            this.price_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.price_box.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.price_box.Enabled = false;
+            this.price_box.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price_box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
+            this.price_box.Location = new System.Drawing.Point(50, 69);
+            this.price_box.Margin = new System.Windows.Forms.Padding(50, 3, 3, 3);
+            this.price_box.Multiline = true;
+            this.price_box.Name = "price_box";
+            this.price_box.Size = new System.Drawing.Size(347, 60);
+            this.price_box.TabIndex = 1;
+            this.price_box.Text = "Unpaid Invoice:";
             // 
             // panel1
             // 
@@ -381,6 +382,7 @@ namespace SIA_AccountingSystem
             this.profileview1.Name = "profileview1";
             this.profileview1.Size = new System.Drawing.Size(700, 304);
             this.profileview1.TabIndex = 1;
+            this.profileview1.Load += new System.EventHandler(this.profileview1_Load);
             // 
             // invoiceview1
             // 
@@ -431,7 +433,7 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox price_box;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Profile_btn;
