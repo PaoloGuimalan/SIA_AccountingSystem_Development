@@ -64,5 +64,10 @@ namespace SIA_AccountingSystem
             Connection(value_ID2);
             //MessageBox.Show(value_ID2);
         }
+
+        private void load_invoice_drop(object sender, EventArgs e)
+        {
+            //Connection(value_ID2);
+        }
     }
 }
