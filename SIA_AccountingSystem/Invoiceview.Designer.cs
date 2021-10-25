@@ -39,10 +39,12 @@ namespace SIA_AccountingSystem
             this.load_btn = new System.Windows.Forms.Button();
             this.due_selection = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pay_miscellanous = new System.Windows.Forms.Button();
-            this.pay_units = new System.Windows.Forms.Button();
             this.pay_overall = new System.Windows.Forms.Button();
+            this.pay_units = new System.Windows.Forms.Button();
+            this.pay_miscellanous = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.m_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.m_fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -131,7 +133,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(798, 50);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -180,37 +182,9 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(798, 50);
             this.tableLayoutPanel3.TabIndex = 2;
-            // 
-            // pay_miscellanous
-            // 
-            this.pay_miscellanous.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pay_miscellanous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.pay_miscellanous.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.pay_miscellanous.ForeColor = System.Drawing.Color.White;
-            this.pay_miscellanous.Location = new System.Drawing.Point(90, 10);
-            this.pay_miscellanous.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.pay_miscellanous.Name = "pay_miscellanous";
-            this.pay_miscellanous.Size = new System.Drawing.Size(172, 30);
-            this.pay_miscellanous.TabIndex = 6;
-            this.pay_miscellanous.Text = "Pay All Miscellanous";
-            this.pay_miscellanous.UseVisualStyleBackColor = false;
-            // 
-            // pay_units
-            // 
-            this.pay_units.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pay_units.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.pay_units.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.pay_units.ForeColor = System.Drawing.Color.White;
-            this.pay_units.Location = new System.Drawing.Point(320, 10);
-            this.pay_units.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.pay_units.Name = "pay_units";
-            this.pay_units.Size = new System.Drawing.Size(172, 30);
-            this.pay_units.TabIndex = 7;
-            this.pay_units.Text = "Pay All Units";
-            this.pay_units.UseVisualStyleBackColor = false;
             // 
             // pay_overall
             // 
@@ -218,7 +192,7 @@ namespace SIA_AccountingSystem
             this.pay_overall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.pay_overall.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.pay_overall.ForeColor = System.Drawing.Color.White;
-            this.pay_overall.Location = new System.Drawing.Point(550, 10);
+            this.pay_overall.Location = new System.Drawing.Point(552, 10);
             this.pay_overall.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.pay_overall.Name = "pay_overall";
             this.pay_overall.Size = new System.Drawing.Size(172, 30);
@@ -226,11 +200,42 @@ namespace SIA_AccountingSystem
             this.pay_overall.Text = "Pay Full";
             this.pay_overall.UseVisualStyleBackColor = false;
             // 
+            // pay_units
+            // 
+            this.pay_units.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pay_units.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pay_units.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.pay_units.ForeColor = System.Drawing.Color.White;
+            this.pay_units.Location = new System.Drawing.Point(321, 10);
+            this.pay_units.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.pay_units.Name = "pay_units";
+            this.pay_units.Size = new System.Drawing.Size(172, 30);
+            this.pay_units.TabIndex = 7;
+            this.pay_units.Text = "Pay All Units";
+            this.pay_units.UseVisualStyleBackColor = false;
+            // 
+            // pay_miscellanous
+            // 
+            this.pay_miscellanous.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pay_miscellanous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pay_miscellanous.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.pay_miscellanous.ForeColor = System.Drawing.Color.White;
+            this.pay_miscellanous.Location = new System.Drawing.Point(91, 10);
+            this.pay_miscellanous.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.pay_miscellanous.Name = "pay_miscellanous";
+            this.pay_miscellanous.Size = new System.Drawing.Size(172, 30);
+            this.pay_miscellanous.TabIndex = 6;
+            this.pay_miscellanous.Text = "Pay All Miscellanous";
+            this.pay_miscellanous.UseVisualStyleBackColor = false;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.m_name,
+            this.m_fee});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(20, 221);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
@@ -238,6 +243,20 @@ namespace SIA_AccountingSystem
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(758, 162);
             this.dataGridView2.TabIndex = 3;
+            // 
+            // m_name
+            // 
+            this.m_name.HeaderText = "Miscellaneous Type";
+            this.m_name.Name = "m_name";
+            this.m_name.ReadOnly = true;
+            this.m_name.Width = 300;
+            // 
+            // m_fee
+            // 
+            this.m_fee.HeaderText = "Fee";
+            this.m_fee.Name = "m_fee";
+            this.m_fee.ReadOnly = true;
+            this.m_fee.Width = 300;
             // 
             // Invoiceview
             // 
@@ -270,5 +289,7 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.Button pay_units;
         private System.Windows.Forms.Button pay_miscellanous;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn m_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn m_fee;
     }
 }

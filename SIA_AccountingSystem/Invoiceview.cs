@@ -42,9 +42,34 @@ namespace SIA_AccountingSystem
                 read2.Read();
                 //MessageBox.Show(read2.GetString(1));
                 dataGridView1.Rows.Add(read2.GetString(1), read2.GetString(2), read2.GetString(3), read2.GetString(7));
+
+                DBConnect2.Close();
             }
 
             DBConnect.Close();
+
+            MySqlConnection DBConnect_misc = new MySqlConnection(conn);
+
+            DBConnect_misc.Open();
+            string query_misc = $"SELECT * FROM misc_assigned WHERE stud_id_misc = '{receive_ID2}' AND status = '{due_selection.Text}'";
+            MySqlCommand command_misc = new MySqlCommand(query_misc, DBConnect_misc);
+            MySqlDataReader read_misc = command_misc.ExecuteReader();
+
+            while (read_misc.Read())
+            {
+                MySqlConnection DBConnect2_misc = new MySqlConnection(conn);
+                DBConnect2_misc.Open();
+                string query2_misc = $"SELECT * FROM av_miscellaneous WHERE m_id = '{read_misc.GetString(2)}'";
+                MySqlCommand command2_misc = new MySqlCommand(query2_misc, DBConnect2_misc);
+                MySqlDataReader read2_misc = command2_misc.ExecuteReader();
+                read2_misc.Read();
+                //MessageBox.Show(read2.GetString(1));
+                dataGridView2.Rows.Add(read2_misc.GetString(1), read2_misc.GetString(3));
+
+                DBConnect2_misc.Close();
+            }
+
+            DBConnect_misc.Close();
         }
         public Invoiceview()
         {
@@ -61,6 +86,7 @@ namespace SIA_AccountingSystem
         private void load_btn_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
             Connection(value_ID2);
             //MessageBox.Show(value_ID2);
         }
