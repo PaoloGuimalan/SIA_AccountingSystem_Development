@@ -30,7 +30,14 @@ namespace SIA_AccountingSystem
             MySqlCommand commandprice = new MySqlCommand(queryprice, DBPrice);
             MySqlDataReader readprice = commandprice.ExecuteReader();
             readprice.Read();
-            price_box.Text = "Unpaid Invoice: P" + readprice.GetString(0);
+            try
+            {
+                price_box.Text = "Unpaid Invoice: P" + readprice.GetString(0);
+            }
+            catch(Exception ez)
+            {
+                price_box.Text = "Unpaid Invoice: P 0.00";
+            }
             DBPrice.Close();
 
             MySqlConnection DBConnect = new MySqlConnection(conn);

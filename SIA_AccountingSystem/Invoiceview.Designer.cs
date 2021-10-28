@@ -199,6 +199,7 @@ namespace SIA_AccountingSystem
             this.pay_overall.TabIndex = 8;
             this.pay_overall.Text = "Pay Full";
             this.pay_overall.UseVisualStyleBackColor = false;
+            this.pay_overall.Click += new System.EventHandler(this.pay_overall_Click);
             // 
             // pay_units
             // 
@@ -213,6 +214,7 @@ namespace SIA_AccountingSystem
             this.pay_units.TabIndex = 7;
             this.pay_units.Text = "Pay All Units";
             this.pay_units.UseVisualStyleBackColor = false;
+            this.pay_units.Click += new System.EventHandler(this.pay_units_Click);
             // 
             // pay_miscellanous
             // 
@@ -227,6 +229,7 @@ namespace SIA_AccountingSystem
             this.pay_miscellanous.TabIndex = 6;
             this.pay_miscellanous.Text = "Pay All Miscellanous";
             this.pay_miscellanous.UseVisualStyleBackColor = false;
+            this.pay_miscellanous.Click += new System.EventHandler(this.pay_miscellanous_Click);
             // 
             // dataGridView2
             // 

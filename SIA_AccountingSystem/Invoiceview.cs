@@ -22,6 +22,37 @@ namespace SIA_AccountingSystem
         }
 
         string value_ID2;
+
+        private void Misc_Con()
+        {
+            DateTime dateTime = DateTime.UtcNow.Date;
+            string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
+            MySqlConnection DBConnect1 = new MySqlConnection(conn);
+            DBConnect1.Open();
+            string query1 = $"UPDATE misc_assigned SET status = 'Paid', date_payed = '{dateTime.ToString("d")}' WHERE stud_id_misc = '{value_ID2}'";
+            MySqlCommand command1 = new MySqlCommand(query1, DBConnect1);
+            command1.ExecuteNonQuery();
+            DBConnect1.Close();
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            Connection(value_ID2);
+        }
+
+        private void Units_Con()
+        {
+            DateTime dateTime = DateTime.UtcNow.Date;
+            string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
+            MySqlConnection DBConnect1 = new MySqlConnection(conn);
+            DBConnect1.Open();
+            string query1 = $"UPDATE units_assigned SET status = 'Paid', date_payed = '{dateTime.ToString("d")}' WHERE stud_id_units = '{value_ID2}'";
+            MySqlCommand command1 = new MySqlCommand(query1, DBConnect1);
+            command1.ExecuteNonQuery();
+            DBConnect1.Close();
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            Connection(value_ID2);
+        }
+
         private void Connection(string receive_ID2)
         {
             string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
@@ -94,6 +125,72 @@ namespace SIA_AccountingSystem
         private void load_invoice_drop(object sender, EventArgs e)
         {
             //Connection(value_ID2);
+        }
+
+        private void pay_miscellanous_Click(object sender, EventArgs e)
+        {
+            DateTime dateTime = DateTime.UtcNow.Date;
+            //MessageBox.Show(dateTime.ToString("d"));
+            if(value_ID2 == null)
+            {
+                MessageBox.Show("No Value");
+            }
+            else
+            {
+                //MessageBox.Show("With Value");
+                DialogResult dialogResult = MessageBox.Show("Confirm All Miscellaneous Payment?", "Some Title", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Misc_Con();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+                }
+            }
+        }
+
+        private void pay_units_Click(object sender, EventArgs e)
+        {
+            if (value_ID2 == null)
+            {
+                MessageBox.Show("No Value");
+            }
+            else
+            {
+                //MessageBox.Show("With Value");
+                DialogResult dialogResult = MessageBox.Show("Confirm All Units Payment?", "Some Title", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Units_Con();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+                }
+            }
+        }
+
+        private void pay_overall_Click(object sender, EventArgs e)
+        {
+            if (value_ID2 == null)
+            {
+                MessageBox.Show("No Value");
+            }
+            else
+            {
+                //MessageBox.Show("With Value");
+                DialogResult dialogResult = MessageBox.Show("Confirm Full Payment?", "Some Title", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Misc_Con();
+                    Units_Con();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+                }
+            }
         }
     }
 }
