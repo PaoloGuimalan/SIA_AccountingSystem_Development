@@ -46,6 +46,7 @@ namespace SIA_AccountingSystem
             this.units = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -85,7 +86,8 @@ namespace SIA_AccountingSystem
             this.subject_name,
             this.units,
             this.price,
-            this.id});
+            this.id,
+            this.status});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(20, 53);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(20, 3, 20, 10);
@@ -271,6 +273,12 @@ namespace SIA_AccountingSystem
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
             // Invoiceview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,5 +313,6 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.DataGridViewTextBoxColumn units;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
     }
 }

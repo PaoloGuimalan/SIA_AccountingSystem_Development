@@ -72,7 +72,7 @@ namespace SIA_AccountingSystem
                 MySqlDataReader read2 = command2.ExecuteReader();
                 read2.Read();
                 //MessageBox.Show(read2.GetString(1));
-                dataGridView1.Rows.Add(read2.GetString(1), read2.GetString(2), read2.GetString(3), read2.GetString(7), read1.GetString(0));
+                dataGridView1.Rows.Add(read2.GetString(1), read2.GetString(2), read2.GetString(3), read2.GetString(7), read1.GetString(0), read1.GetString(3));
 
                 DBConnect2.Close();
             }
@@ -97,6 +97,7 @@ namespace SIA_AccountingSystem
                 //MessageBox.Show(read2.GetString(1));
                 dataGridView2.Rows.Add(read2_misc.GetString(1), read2_misc.GetString(3));
                 dataGridView1.Columns["id"].Visible = false;
+                dataGridView1.Columns["status"].Visible = false;
                 DBConnect2_misc.Close();
             }
 
@@ -193,13 +194,43 @@ namespace SIA_AccountingSystem
             }
         }
 
+        private void Unit_Con_Single(string unit_id)
+        {
+            DateTime dateTime = DateTime.UtcNow.Date;
+            string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
+            MySqlConnection DBConnect1 = new MySqlConnection(conn);
+            DBConnect1.Open();
+            string query1 = $"UPDATE units_assigned SET status = 'Paid', date_payed = '{dateTime.ToString("d")}' WHERE id = '{unit_id}'";
+            MySqlCommand command1 = new MySqlCommand(query1, DBConnect1);
+            command1.ExecuteNonQuery();
+            DBConnect1.Close();
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            Connection(value_ID2);
+        }
+
         private void click_unit(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 dataGridView1.CurrentRow.Selected = true;
                 string data = dataGridView1.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
-                MessageBox.Show(data);
+                string status_unit = dataGridView1.Rows[e.RowIndex].Cells["status"].FormattedValue.ToString();
+                string sub_code = dataGridView1.Rows[e.RowIndex].Cells["subject_code"].FormattedValue.ToString();
+
+                if (status_unit == "Unpaid")
+                {
+                    //MessageBox.Show(data + " " + status_unit);
+                    DialogResult dialogResult = MessageBox.Show($"Confirm Payment of {sub_code}?", "Some Title", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        Unit_Con_Single(data);
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        //do something else
+                    }
+                }
             }
         }
 

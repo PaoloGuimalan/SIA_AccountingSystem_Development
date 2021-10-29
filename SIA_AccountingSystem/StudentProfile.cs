@@ -26,7 +26,7 @@ namespace SIA_AccountingSystem
             MySqlConnection DBPrice = new MySqlConnection(conn);
 
             DBPrice.Open();
-            string queryprice = $"SELECT SUM(unit_price) FROM av_units WHERE unit_id IN (SELECT unit_id FROM units_assigned WHERE stud_id_units = '{val_id}' AND status = 'Unpaid')";
+            string queryprice = $"SELECT  SUM(total) total_price FROM (SELECT SUM(unit_price) total FROM av_units WHERE unit_id IN(SELECT unit_id FROM units_assigned WHERE stud_id_units = '{val_id}' AND status = 'Unpaid') UNION ALL SELECT SUM(m_fee) total FROM av_miscellaneous WHERE m_id IN(SELECT misc_id FROM misc_assigned WHERE stud_id_misc = '{val_id}' AND status = 'Unpaid')) s";
             MySqlCommand commandprice = new MySqlCommand(queryprice, DBPrice);
             MySqlDataReader readprice = commandprice.ExecuteReader();
             readprice.Read();
