@@ -19,7 +19,7 @@ namespace SIA_AccountingSystem
             get { return ID_reciever; }
         }
 
-        private void Connection(string val_id)
+        public void Connection_price(string val_id)
         {
             string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
 
@@ -58,7 +58,7 @@ namespace SIA_AccountingSystem
         public StudentProfile(string stud_id_im)
         {
             InitializeComponent();
-            Connection(stud_id_im);
+            Connection_price(stud_id_im);
             ID_reciever = stud_id_im;
             profileview1.ID = stud_id_im;
             invoiceview1.ID = stud_id_im;

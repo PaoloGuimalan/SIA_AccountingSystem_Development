@@ -72,7 +72,7 @@ namespace SIA_AccountingSystem
                 MySqlDataReader read2 = command2.ExecuteReader();
                 read2.Read();
                 //MessageBox.Show(read2.GetString(1));
-                dataGridView1.Rows.Add(read2.GetString(1), read2.GetString(2), read2.GetString(3), read2.GetString(7));
+                dataGridView1.Rows.Add(read2.GetString(1), read2.GetString(2), read2.GetString(3), read2.GetString(7), read1.GetString(0));
 
                 DBConnect2.Close();
             }
@@ -96,7 +96,7 @@ namespace SIA_AccountingSystem
                 read2_misc.Read();
                 //MessageBox.Show(read2.GetString(1));
                 dataGridView2.Rows.Add(read2_misc.GetString(1), read2_misc.GetString(3));
-
+                dataGridView1.Columns["id"].Visible = false;
                 DBConnect2_misc.Close();
             }
 
@@ -191,6 +191,21 @@ namespace SIA_AccountingSystem
                     //do something else
                 }
             }
+        }
+
+        private void click_unit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                string data = dataGridView1.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
+                MessageBox.Show(data);
+            }
+        }
+
+        private void click_misc(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

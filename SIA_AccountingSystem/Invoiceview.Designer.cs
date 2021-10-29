@@ -31,10 +31,6 @@ namespace SIA_AccountingSystem
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.subject_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.units = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.load_btn = new System.Windows.Forms.Button();
             this.due_selection = new System.Windows.Forms.ComboBox();
@@ -45,6 +41,11 @@ namespace SIA_AccountingSystem
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.m_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.units = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -83,7 +84,8 @@ namespace SIA_AccountingSystem
             this.subject_code,
             this.subject_name,
             this.units,
-            this.price});
+            this.price,
+            this.id});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(20, 53);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(20, 3, 20, 10);
@@ -91,34 +93,7 @@ namespace SIA_AccountingSystem
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(758, 155);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // subject_code
-            // 
-            this.subject_code.HeaderText = "Subject Code";
-            this.subject_code.Name = "subject_code";
-            this.subject_code.ReadOnly = true;
-            this.subject_code.Width = 250;
-            // 
-            // subject_name
-            // 
-            this.subject_name.HeaderText = "Subject Name";
-            this.subject_name.Name = "subject_name";
-            this.subject_name.ReadOnly = true;
-            this.subject_name.Width = 250;
-            // 
-            // units
-            // 
-            this.units.HeaderText = "Units";
-            this.units.Name = "units";
-            this.units.ReadOnly = true;
-            this.units.Width = 250;
-            // 
-            // price
-            // 
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            this.price.Width = 250;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.click_unit);
             // 
             // tableLayoutPanel2
             // 
@@ -246,6 +221,7 @@ namespace SIA_AccountingSystem
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(758, 162);
             this.dataGridView2.TabIndex = 3;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.click_misc);
             // 
             // m_name
             // 
@@ -260,6 +236,40 @@ namespace SIA_AccountingSystem
             this.m_fee.Name = "m_fee";
             this.m_fee.ReadOnly = true;
             this.m_fee.Width = 300;
+            // 
+            // subject_code
+            // 
+            this.subject_code.HeaderText = "Subject Code";
+            this.subject_code.Name = "subject_code";
+            this.subject_code.ReadOnly = true;
+            this.subject_code.Width = 250;
+            // 
+            // subject_name
+            // 
+            this.subject_name.HeaderText = "Subject Name";
+            this.subject_name.Name = "subject_name";
+            this.subject_name.ReadOnly = true;
+            this.subject_name.Width = 250;
+            // 
+            // units
+            // 
+            this.units.HeaderText = "Units";
+            this.units.Name = "units";
+            this.units.ReadOnly = true;
+            this.units.Width = 250;
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            this.price.Width = 250;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
             // Invoiceview
             // 
@@ -283,10 +293,6 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ComboBox due_selection;
         private System.Windows.Forms.Button load_btn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subject_code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subject_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn units;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button pay_overall;
         private System.Windows.Forms.Button pay_units;
@@ -294,5 +300,10 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn m_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn m_fee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject_code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn units;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
     }
 }
