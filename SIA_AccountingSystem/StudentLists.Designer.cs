@@ -34,7 +34,7 @@ namespace SIA_AccountingSystem
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.Search_btn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.search_box = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -106,7 +106,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.Search_btn, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.search_box, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(398, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
@@ -131,13 +131,13 @@ namespace SIA_AccountingSystem
             this.Search_btn.UseVisualStyleBackColor = false;
             this.Search_btn.Click += new System.EventHandler(this.Search_btn_Click);
             // 
-            // textBox1
+            // search_box
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(3, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 20);
-            this.textBox1.TabIndex = 2;
+            this.search_box.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.search_box.Location = new System.Drawing.Point(3, 40);
+            this.search_box.Name = "search_box";
+            this.search_box.Size = new System.Drawing.Size(193, 20);
+            this.search_box.TabIndex = 2;
             // 
             // tableLayoutPanel4
             // 
@@ -206,6 +206,7 @@ namespace SIA_AccountingSystem
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "1st year",
@@ -219,6 +220,7 @@ namespace SIA_AccountingSystem
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "BSIT",
@@ -272,7 +274,7 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox search_box;
         private System.Windows.Forms.Button Search_btn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;

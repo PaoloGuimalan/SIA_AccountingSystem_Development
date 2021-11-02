@@ -238,5 +238,12 @@ namespace SIA_AccountingSystem
         {
 
         }
+
+        private void combo_onchange(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            Connection(value_ID2);
+        }
     }
 }

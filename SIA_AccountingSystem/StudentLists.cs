@@ -36,10 +36,36 @@ namespace SIA_AccountingSystem
                 dataGridView1.Columns[i].Width = 200;
             }
         }
+
+        private void Connection_search(string id_search)
+        {
+            string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
+            MySqlConnection DBConnect = new MySqlConnection(conn);
+
+            DBConnect.Open();
+            string query = $"SELECT * FROM students_list WHERE student_id = '{id_search}'";
+            MySqlCommand command1 = new MySqlCommand(query, DBConnect);
+            //MySqlDataReader read1 = command1.ExecuteReader();
+            MySqlDataAdapter adapt;
+            adapt = new MySqlDataAdapter(query, DBConnect);
+            //MessageBox.Show(read1.GetString(0));
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            DBConnect.Close();
+
+            for (int i = 0; i < 5; i++)
+            {
+                dataGridView1.Columns[i].Width = 200;
+            }
+        }
+
         public StudentLists()
         {
             InitializeComponent();
             Connection();
+            comboBox1.SelectedText = "--select a program--";
+            comboBox2.SelectedText = "--select a year--";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -54,7 +80,15 @@ namespace SIA_AccountingSystem
 
         private void Search_btn_Click(object sender, EventArgs e)
         {
-            
+            if(search_box.Text == "")
+            {
+                MessageBox.Show("Please type a Student ID");
+            }
+            else
+            {
+                dataGridView1.Columns.Clear();
+                Connection_search(search_box.Text);
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

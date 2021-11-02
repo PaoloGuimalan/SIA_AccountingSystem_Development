@@ -31,6 +31,12 @@ namespace SIA_AccountingSystem
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.subject_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.units = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.load_btn = new System.Windows.Forms.Button();
             this.due_selection = new System.Windows.Forms.ComboBox();
@@ -41,12 +47,6 @@ namespace SIA_AccountingSystem
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.m_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subject_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.units = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -97,6 +97,46 @@ namespace SIA_AccountingSystem
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.click_unit);
             // 
+            // subject_code
+            // 
+            this.subject_code.HeaderText = "Subject Code";
+            this.subject_code.Name = "subject_code";
+            this.subject_code.ReadOnly = true;
+            this.subject_code.Width = 250;
+            // 
+            // subject_name
+            // 
+            this.subject_name.HeaderText = "Subject Name";
+            this.subject_name.Name = "subject_name";
+            this.subject_name.ReadOnly = true;
+            this.subject_name.Width = 250;
+            // 
+            // units
+            // 
+            this.units.HeaderText = "Units";
+            this.units.Name = "units";
+            this.units.ReadOnly = true;
+            this.units.Width = 250;
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            this.price.Width = 250;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -132,6 +172,7 @@ namespace SIA_AccountingSystem
             // due_selection
             // 
             this.due_selection.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.due_selection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.due_selection.FormattingEnabled = true;
             this.due_selection.Items.AddRange(new object[] {
             "Unpaid",
@@ -142,6 +183,7 @@ namespace SIA_AccountingSystem
             this.due_selection.Name = "due_selection";
             this.due_selection.Size = new System.Drawing.Size(274, 21);
             this.due_selection.TabIndex = 2;
+            this.due_selection.SelectedIndexChanged += new System.EventHandler(this.combo_onchange);
             this.due_selection.DropDownClosed += new System.EventHandler(this.load_invoice_drop);
             // 
             // tableLayoutPanel3
@@ -238,46 +280,6 @@ namespace SIA_AccountingSystem
             this.m_fee.Name = "m_fee";
             this.m_fee.ReadOnly = true;
             this.m_fee.Width = 300;
-            // 
-            // subject_code
-            // 
-            this.subject_code.HeaderText = "Subject Code";
-            this.subject_code.Name = "subject_code";
-            this.subject_code.ReadOnly = true;
-            this.subject_code.Width = 250;
-            // 
-            // subject_name
-            // 
-            this.subject_name.HeaderText = "Subject Name";
-            this.subject_name.Name = "subject_name";
-            this.subject_name.ReadOnly = true;
-            this.subject_name.Width = 250;
-            // 
-            // units
-            // 
-            this.units.HeaderText = "Units";
-            this.units.Name = "units";
-            this.units.ReadOnly = true;
-            this.units.Width = 250;
-            // 
-            // price
-            // 
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            this.price.Width = 250;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
             // 
             // Invoiceview
             // 
