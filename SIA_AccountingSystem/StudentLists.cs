@@ -101,5 +101,13 @@ namespace SIA_AccountingSystem
                 stud.Show();
             }
         }
+
+        private void load_list_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "" && comboBox2.Text == "")
+            {
+                MessageBox.Show("Please Select a Year and Course");
+            }
+        }
     }
 }

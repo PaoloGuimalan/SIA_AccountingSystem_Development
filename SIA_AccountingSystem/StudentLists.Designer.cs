@@ -42,6 +42,7 @@ namespace SIA_AccountingSystem
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.load_list = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -189,23 +190,25 @@ namespace SIA_AccountingSystem
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.Controls.Add(this.comboBox2, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.comboBox1, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.load_list, 2, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(398, 0);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(399, 38);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // comboBox2
             // 
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
@@ -213,13 +216,14 @@ namespace SIA_AccountingSystem
             "2nd year",
             "3rd year",
             "4th year"});
-            this.comboBox2.Location = new System.Drawing.Point(202, 3);
+            this.comboBox2.Location = new System.Drawing.Point(135, 8);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(194, 21);
+            this.comboBox2.Size = new System.Drawing.Size(126, 21);
             this.comboBox2.TabIndex = 1;
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -227,10 +231,10 @@ namespace SIA_AccountingSystem
             "BSECE",
             "BSA",
             "BSENT"});
-            this.comboBox1.Location = new System.Drawing.Point(0, 3);
+            this.comboBox1.Location = new System.Drawing.Point(0, 8);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 21);
+            this.comboBox1.Size = new System.Drawing.Size(129, 21);
             this.comboBox1.TabIndex = 0;
             // 
             // dataGridView1
@@ -247,6 +251,20 @@ namespace SIA_AccountingSystem
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // load_list
+            // 
+            this.load_list.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.load_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
+            this.load_list.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.load_list.ForeColor = System.Drawing.Color.White;
+            this.load_list.Location = new System.Drawing.Point(271, 4);
+            this.load_list.Name = "load_list";
+            this.load_list.Size = new System.Drawing.Size(120, 30);
+            this.load_list.TabIndex = 4;
+            this.load_list.Text = "Load List";
+            this.load_list.UseVisualStyleBackColor = false;
+            this.load_list.Click += new System.EventHandler(this.load_list_Click);
             // 
             // StudentLists
             // 
@@ -283,5 +301,6 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button load_list;
     }
 }
