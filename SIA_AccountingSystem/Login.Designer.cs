@@ -155,8 +155,10 @@ namespace SIA_AccountingSystem
             this.log_reg_pass.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.log_reg_pass.Location = new System.Drawing.Point(108, 4);
             this.log_reg_pass.Name = "log_reg_pass";
+            this.log_reg_pass.PasswordChar = '*';
             this.log_reg_pass.Size = new System.Drawing.Size(244, 20);
             this.log_reg_pass.TabIndex = 2;
+            this.log_reg_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox2
             // 
@@ -231,6 +233,7 @@ namespace SIA_AccountingSystem
             this.log_reg_id.Name = "log_reg_id";
             this.log_reg_id.Size = new System.Drawing.Size(244, 20);
             this.log_reg_id.TabIndex = 1;
+            this.log_reg_id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanel1
             // 
