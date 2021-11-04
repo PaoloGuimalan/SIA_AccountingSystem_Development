@@ -401,6 +401,7 @@ namespace SIA_AccountingSystem
             this.Controls.Add(this.tableLayoutPanelmain);
             this.Name = "StudentProfile";
             this.Text = "StudentProfile";
+            this.Load += new System.EventHandler(this.StudentProfile_Load);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

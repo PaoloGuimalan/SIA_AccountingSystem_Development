@@ -86,5 +86,10 @@ namespace SIA_AccountingSystem
         {
 
         }
+
+        private void StudentProfile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,12 +31,6 @@ namespace SIA_AccountingSystem
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.subject_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.units = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.load_btn = new System.Windows.Forms.Button();
             this.due_selection = new System.Windows.Forms.ComboBox();
@@ -47,6 +41,14 @@ namespace SIA_AccountingSystem
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.m_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.issue_date_misc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.units = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.issue_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -86,6 +88,7 @@ namespace SIA_AccountingSystem
             this.subject_name,
             this.units,
             this.price,
+            this.issue_date,
             this.id,
             this.status});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -96,46 +99,6 @@ namespace SIA_AccountingSystem
             this.dataGridView1.Size = new System.Drawing.Size(758, 155);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.click_unit);
-            // 
-            // subject_code
-            // 
-            this.subject_code.HeaderText = "Subject Code";
-            this.subject_code.Name = "subject_code";
-            this.subject_code.ReadOnly = true;
-            this.subject_code.Width = 250;
-            // 
-            // subject_name
-            // 
-            this.subject_name.HeaderText = "Subject Name";
-            this.subject_name.Name = "subject_name";
-            this.subject_name.ReadOnly = true;
-            this.subject_name.Width = 250;
-            // 
-            // units
-            // 
-            this.units.HeaderText = "Units";
-            this.units.Name = "units";
-            this.units.ReadOnly = true;
-            this.units.Width = 250;
-            // 
-            // price
-            // 
-            this.price.HeaderText = "Price";
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            this.price.Width = 250;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
             // 
             // tableLayoutPanel2
             // 
@@ -257,7 +220,8 @@ namespace SIA_AccountingSystem
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.m_name,
-            this.m_fee});
+            this.m_fee,
+            this.issue_date_misc});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(20, 221);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
@@ -280,6 +244,58 @@ namespace SIA_AccountingSystem
             this.m_fee.Name = "m_fee";
             this.m_fee.ReadOnly = true;
             this.m_fee.Width = 300;
+            // 
+            // issue_date_misc
+            // 
+            this.issue_date_misc.HeaderText = "Issue Date";
+            this.issue_date_misc.Name = "issue_date_misc";
+            this.issue_date_misc.ReadOnly = true;
+            // 
+            // subject_code
+            // 
+            this.subject_code.HeaderText = "Subject Code";
+            this.subject_code.Name = "subject_code";
+            this.subject_code.ReadOnly = true;
+            this.subject_code.Width = 250;
+            // 
+            // subject_name
+            // 
+            this.subject_name.HeaderText = "Subject Name";
+            this.subject_name.Name = "subject_name";
+            this.subject_name.ReadOnly = true;
+            this.subject_name.Width = 250;
+            // 
+            // units
+            // 
+            this.units.HeaderText = "Units";
+            this.units.Name = "units";
+            this.units.ReadOnly = true;
+            this.units.Width = 250;
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Price";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            this.price.Width = 250;
+            // 
+            // issue_date
+            // 
+            this.issue_date.HeaderText = "Issue Date";
+            this.issue_date.Name = "issue_date";
+            this.issue_date.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
             // 
             // Invoiceview
             // 
@@ -310,10 +326,12 @@ namespace SIA_AccountingSystem
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn m_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn m_fee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn issue_date_misc;
         private System.Windows.Forms.DataGridViewTextBoxColumn subject_code;
         private System.Windows.Forms.DataGridViewTextBoxColumn subject_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn units;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn issue_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
     }

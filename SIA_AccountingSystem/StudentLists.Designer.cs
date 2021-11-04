@@ -41,8 +41,8 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.load_list = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -212,11 +212,11 @@ namespace SIA_AccountingSystem
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "1st year",
-            "2nd year",
-            "3rd year",
-            "4th year"});
-            this.comboBox2.Location = new System.Drawing.Point(135, 8);
+            "1st",
+            "2nd",
+            "3rd",
+            "4th"});
+            this.comboBox2.Location = new System.Drawing.Point(136, 8);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(126, 21);
             this.comboBox2.TabIndex = 1;
@@ -237,6 +237,20 @@ namespace SIA_AccountingSystem
             this.comboBox1.Size = new System.Drawing.Size(129, 21);
             this.comboBox1.TabIndex = 0;
             // 
+            // load_list
+            // 
+            this.load_list.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.load_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
+            this.load_list.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.load_list.ForeColor = System.Drawing.Color.White;
+            this.load_list.Location = new System.Drawing.Point(272, 4);
+            this.load_list.Name = "load_list";
+            this.load_list.Size = new System.Drawing.Size(120, 30);
+            this.load_list.TabIndex = 4;
+            this.load_list.Text = "Load List";
+            this.load_list.UseVisualStyleBackColor = false;
+            this.load_list.Click += new System.EventHandler(this.load_list_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -251,20 +265,6 @@ namespace SIA_AccountingSystem
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // load_list
-            // 
-            this.load_list.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.load_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
-            this.load_list.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.load_list.ForeColor = System.Drawing.Color.White;
-            this.load_list.Location = new System.Drawing.Point(271, 4);
-            this.load_list.Name = "load_list";
-            this.load_list.Size = new System.Drawing.Size(120, 30);
-            this.load_list.TabIndex = 4;
-            this.load_list.Text = "Load List";
-            this.load_list.UseVisualStyleBackColor = false;
-            this.load_list.Click += new System.EventHandler(this.load_list_Click);
             // 
             // StudentLists
             // 

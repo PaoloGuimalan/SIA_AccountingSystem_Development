@@ -63,6 +63,9 @@ namespace SIA_AccountingSystem
             MySqlCommand command1 = new MySqlCommand(query, DBConnect);
             MySqlDataReader read1 = command1.ExecuteReader();
 
+            dataGridView1.Columns["id"].Visible = false;
+            dataGridView1.Columns["status"].Visible = false;
+
             while (read1.Read())
             {
                 MySqlConnection DBConnect2 = new MySqlConnection(conn);
@@ -72,7 +75,20 @@ namespace SIA_AccountingSystem
                 MySqlDataReader read2 = command2.ExecuteReader();
                 read2.Read();
                 //MessageBox.Show(read2.GetString(1));
-                dataGridView1.Rows.Add(read2.GetString(1), read2.GetString(2), read2.GetString(3), read2.GetString(7), read1.GetString(0), read1.GetString(3));
+                //dataGridView1.Rows.Add(read2.GetString(1), read2.GetString(2), read2.GetString(3), read2.GetString(7), read1.GetString(0), read1.GetString(3));
+
+                if(due_selection.Text == "Unpaid")
+                {
+                    dataGridView1.Rows.Add(read2.GetString(1), read2.GetString(2), read2.GetString(3), read2.GetString(7), read1.GetString(5), read1.GetString(0), read1.GetString(3));
+                }
+                else if (due_selection.Text == "Paid")
+                {
+                    dataGridView1.Rows.Add(read2.GetString(1), read2.GetString(2), read2.GetString(3), read2.GetString(7), read1.GetString(4), read1.GetString(0), read1.GetString(3));
+                }
+                else if(due_selection.Text == "Overdue")
+                {
+                    dataGridView1.Rows.Add(read2.GetString(1), read2.GetString(2), read2.GetString(3), read2.GetString(7), read1.GetString(5), read1.GetString(0), read1.GetString(3));
+                }
 
                 DBConnect2.Close();
             }
@@ -95,7 +111,21 @@ namespace SIA_AccountingSystem
                 MySqlDataReader read2_misc = command2_misc.ExecuteReader();
                 read2_misc.Read();
                 //MessageBox.Show(read2.GetString(1));
-                dataGridView2.Rows.Add(read2_misc.GetString(1), read2_misc.GetString(3));
+                //dataGridView2.Rows.Add(read2_misc.GetString(1), read2_misc.GetString(3));
+
+                if (due_selection.Text == "Unpaid")
+                {
+                    dataGridView2.Rows.Add(read2_misc.GetString(1), read2_misc.GetString(3), read_misc.GetString(5));
+                }
+                else if (due_selection.Text == "Paid")
+                {
+                    dataGridView2.Rows.Add(read2_misc.GetString(1), read2_misc.GetString(3), read_misc.GetString(4));
+                }
+                else if (due_selection.Text == "Overdue")
+                {
+                    dataGridView2.Rows.Add(read2_misc.GetString(1), read2_misc.GetString(3), read_misc.GetString(4));
+                }
+
                 dataGridView1.Columns["id"].Visible = false;
                 dataGridView1.Columns["status"].Visible = false;
                 DBConnect2_misc.Close();

@@ -104,9 +104,34 @@ namespace SIA_AccountingSystem
 
         private void load_list_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "" && comboBox2.Text == "")
+            if (comboBox1.Text == "" || comboBox2.Text == "")
             {
                 MessageBox.Show("Please Select a Year and Course");
+            }
+            else
+            {
+                string year = comboBox2.Text;
+                string course = comboBox1.Text;
+
+                string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
+                MySqlConnection DBConnect = new MySqlConnection(conn);
+
+                DBConnect.Open();
+                string query = $"SELECT * FROM students_list WHERE course = '{course}' AND year = '{year}'";
+                MySqlCommand command1 = new MySqlCommand(query, DBConnect);
+                //MySqlDataReader read1 = command1.ExecuteReader();
+                MySqlDataAdapter adapt;
+                adapt = new MySqlDataAdapter(query, DBConnect);
+                //MessageBox.Show(read1.GetString(0));
+                DataTable dt = new DataTable();
+                adapt.Fill(dt);
+                dataGridView1.DataSource = dt;
+                DBConnect.Close();
+
+                for (int i = 0; i < 5; i++)
+                {
+                    dataGridView1.Columns[i].Width = 200;
+                }
             }
         }
     }
