@@ -18,18 +18,23 @@ namespace SIA_AccountingSystem
         {
             string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
             MySqlConnection DBConnect = new MySqlConnection(conn);
+            dataGridView1.Rows.Clear();
 
             DBConnect.Open();
-                string query = "SELECT * FROM students_list";
-                MySqlCommand command1 = new MySqlCommand(query, DBConnect);
-                //MySqlDataReader read1 = command1.ExecuteReader();
-                MySqlDataAdapter adapt;
-                adapt = new MySqlDataAdapter(query, DBConnect);
+            string query = "SELECT * FROM students_list";
+            MySqlCommand command1 = new MySqlCommand(query, DBConnect);
+            MySqlDataReader read1 = command1.ExecuteReader();
+            while (read1.Read())
+            {
+                dataGridView1.Rows.Add(read1.GetString(0), read1.GetString(1), read1.GetString(2), read1.GetString(3), read1.GetString(4), read1.GetString(5), read1.GetString(6));
+            }
+                //MySqlDataAdapter adapt;
+                //adapt = new MySqlDataAdapter(query, DBConnect);
                 //MessageBox.Show(read1.GetString(0));
-                DataTable dt = new DataTable();
-                adapt.Fill(dt);
-                dataGridView1.DataSource = dt;
-                DBConnect.Close();
+                //DataTable dt = new DataTable();
+                //adapt.Fill(dt);
+                //dataGridView1.DataSource = dt;
+            DBConnect.Close();
 
             for(int i = 0; i < 5; i++)
             {
@@ -41,17 +46,22 @@ namespace SIA_AccountingSystem
         {
             string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
             MySqlConnection DBConnect = new MySqlConnection(conn);
+            dataGridView1.Rows.Clear();
 
             DBConnect.Open();
             string query = $"SELECT * FROM students_list WHERE student_id = '{id_search}'";
             MySqlCommand command1 = new MySqlCommand(query, DBConnect);
-            //MySqlDataReader read1 = command1.ExecuteReader();
-            MySqlDataAdapter adapt;
-            adapt = new MySqlDataAdapter(query, DBConnect);
+            MySqlDataReader read1 = command1.ExecuteReader();
+            while (read1.Read())
+            {
+                dataGridView1.Rows.Add(read1.GetString(0), read1.GetString(1), read1.GetString(2), read1.GetString(3), read1.GetString(4), read1.GetString(5), read1.GetString(6));
+            }
+            //MySqlDataAdapter adapt;
+            //adapt = new MySqlDataAdapter(query, DBConnect);
             //MessageBox.Show(read1.GetString(0));
-            DataTable dt = new DataTable();
-            adapt.Fill(dt);
-            dataGridView1.DataSource = dt;
+            //DataTable dt = new DataTable();
+            //adapt.Fill(dt);
+            //dataGridView1.DataSource = dt;
             DBConnect.Close();
 
             for (int i = 0; i < 5; i++)
@@ -86,7 +96,7 @@ namespace SIA_AccountingSystem
             }
             else
             {
-                dataGridView1.Columns.Clear();
+                //dataGridView1.Columns.Clear();
                 Connection_search(search_box.Text);
             }
         }
@@ -115,17 +125,22 @@ namespace SIA_AccountingSystem
 
                 string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
                 MySqlConnection DBConnect = new MySqlConnection(conn);
+                dataGridView1.Rows.Clear();
 
                 DBConnect.Open();
                 string query = $"SELECT * FROM students_list WHERE course = '{course}' AND year = '{year}'";
                 MySqlCommand command1 = new MySqlCommand(query, DBConnect);
-                //MySqlDataReader read1 = command1.ExecuteReader();
-                MySqlDataAdapter adapt;
-                adapt = new MySqlDataAdapter(query, DBConnect);
+                MySqlDataReader read1 = command1.ExecuteReader();
+                while (read1.Read())
+                {
+                    dataGridView1.Rows.Add(read1.GetString(0), read1.GetString(1), read1.GetString(2), read1.GetString(3), read1.GetString(4), read1.GetString(5), read1.GetString(6));
+                }
+                //MySqlDataAdapter adapt;
+                //adapt = new MySqlDataAdapter(query, DBConnect);
                 //MessageBox.Show(read1.GetString(0));
-                DataTable dt = new DataTable();
-                adapt.Fill(dt);
-                dataGridView1.DataSource = dt;
+                //DataTable dt = new DataTable();
+                //adapt.Fill(dt);
+                //dataGridView1.DataSource = dt;
                 DBConnect.Close();
 
                 for (int i = 0; i < 5; i++)
@@ -133,6 +148,11 @@ namespace SIA_AccountingSystem
                     dataGridView1.Columns[i].Width = 200;
                 }
             }
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -29,6 +29,7 @@ namespace SIA_AccountingSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.login1 = new SIA_AccountingSystem.Login();
             this.register1 = new SIA_AccountingSystem.Register();
             this.SuspendLayout();
@@ -57,6 +58,7 @@ namespace SIA_AccountingSystem
             this.ClientSize = new System.Drawing.Size(776, 419);
             this.Controls.Add(this.login1);
             this.Controls.Add(this.register1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "QCU Accounting System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
