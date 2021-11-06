@@ -59,6 +59,24 @@
     <Compile Include="Accounting.Designer.cs">
       <DependentUpon>Accounting.cs</DependentUpon>
     </Compile>
+    <Compile Include="ac_feetypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ac_feetypes.Designer.cs">
+      <DependentUpon>ac_feetypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ac_invoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ac_invoice.Designer.cs">
+      <DependentUpon>ac_invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ac_overdue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ac_overdue.Designer.cs">
+      <DependentUpon>ac_overdue.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,6 +147,15 @@
     </Compile>
     <EmbeddedResource Include="Accounting.resx">
       <DependentUpon>Accounting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ac_feetypes.resx">
+      <DependentUpon>ac_feetypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ac_invoice.resx">
+      <DependentUpon>ac_invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ac_overdue.resx">
+      <DependentUpon>ac_overdue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>

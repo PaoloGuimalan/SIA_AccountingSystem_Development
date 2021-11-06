@@ -73,7 +73,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(797, 408);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(770, 410);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tableLayoutPanel2
@@ -90,7 +90,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(797, 100);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(770, 100);
             this.tableLayoutPanel2.TabIndex = 2;
             this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
@@ -111,30 +111,30 @@ namespace SIA_AccountingSystem
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel3.Controls.Add(this.Search_btn, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.search_box, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(398, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(385, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(399, 100);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(385, 100);
             this.tableLayoutPanel3.TabIndex = 2;
             this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // Search_btn
             // 
-            this.Search_btn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Search_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Search_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
             this.Search_btn.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.Search_btn.ForeColor = System.Drawing.Color.White;
-            this.Search_btn.Location = new System.Drawing.Point(202, 35);
+            this.Search_btn.Location = new System.Drawing.Point(245, 35);
+            this.Search_btn.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.Search_btn.Name = "Search_btn";
-            this.Search_btn.Size = new System.Drawing.Size(120, 30);
+            this.Search_btn.Size = new System.Drawing.Size(130, 30);
             this.Search_btn.TabIndex = 3;
             this.Search_btn.Text = "Search";
             this.Search_btn.UseVisualStyleBackColor = false;
@@ -142,8 +142,8 @@ namespace SIA_AccountingSystem
             // 
             // search_box
             // 
-            this.search_box.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.search_box.Location = new System.Drawing.Point(3, 40);
+            this.search_box.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.search_box.Location = new System.Drawing.Point(39, 40);
             this.search_box.Name = "search_box";
             this.search_box.Size = new System.Drawing.Size(193, 20);
             this.search_box.TabIndex = 2;
@@ -163,7 +163,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(797, 308);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(770, 310);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // tableLayoutPanel5
@@ -180,7 +180,7 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(797, 38);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(770, 38);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // label1
@@ -206,12 +206,12 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel6.Controls.Add(this.comboBox1, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.load_list, 2, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(398, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(385, 0);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(399, 38);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(385, 38);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // comboBox2
@@ -224,9 +224,9 @@ namespace SIA_AccountingSystem
             "2nd",
             "3rd",
             "4th"});
-            this.comboBox2.Location = new System.Drawing.Point(136, 8);
+            this.comboBox2.Location = new System.Drawing.Point(131, 8);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(126, 21);
+            this.comboBox2.Size = new System.Drawing.Size(122, 21);
             this.comboBox2.TabIndex = 1;
             // 
             // comboBox1
@@ -242,7 +242,7 @@ namespace SIA_AccountingSystem
             this.comboBox1.Location = new System.Drawing.Point(0, 8);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(129, 21);
+            this.comboBox1.Size = new System.Drawing.Size(125, 21);
             this.comboBox1.TabIndex = 0;
             // 
             // load_list
@@ -251,7 +251,7 @@ namespace SIA_AccountingSystem
             this.load_list.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
             this.load_list.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.load_list.ForeColor = System.Drawing.Color.White;
-            this.load_list.Location = new System.Drawing.Point(272, 4);
+            this.load_list.Location = new System.Drawing.Point(260, 4);
             this.load_list.Name = "load_list";
             this.load_list.Size = new System.Drawing.Size(120, 30);
             this.load_list.TabIndex = 4;
@@ -277,7 +277,7 @@ namespace SIA_AccountingSystem
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(777, 270);
+            this.dataGridView1.Size = new System.Drawing.Size(750, 272);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -337,7 +337,7 @@ namespace SIA_AccountingSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "StudentLists";
-            this.Size = new System.Drawing.Size(797, 408);
+            this.Size = new System.Drawing.Size(770, 410);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

@@ -37,7 +37,6 @@ C:\Users\acer\Downloads\SIA_AccountingSystem_Development-main\SIA_AccountingSyst
 C:\Users\acer\Downloads\SIA_AccountingSystem_Development-main\SIA_AccountingSystem_Development-main\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.exe
 C:\Users\acer\Downloads\SIA_AccountingSystem_Development-main\SIA_AccountingSystem_Development-main\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.pdb
 C:\Users\acer\Downloads\SIA_AccountingSystem_Development-main\SIA_AccountingSystem_Development-main\SIA_AccountingSystem\bin\Debug\Bunifu_UI_v1.52.dll
-C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.csproj.AssemblyReference.cache
 C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.StudentLists.resources
 C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\bin\Debug\MySql.Data.DLL
 C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\bin\Debug\Google.Protobuf.dll
@@ -88,3 +87,6 @@ C:\Users\QCU\Desktop\SIA_AccountingSystem_Development-main\SIA_AccountingSystem\
 C:\Users\QCU\Desktop\SIA_AccountingSystem_Development-main\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.exe
 C:\Users\QCU\Desktop\SIA_AccountingSystem_Development-main\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.pdb
 C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.Student_SOA.resources
+C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.ac_feetypes.resources
+C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.ac_invoice.resources
+C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.ac_overdue.resources
