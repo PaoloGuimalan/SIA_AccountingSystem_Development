@@ -91,5 +91,10 @@ namespace SIA_AccountingSystem
         {
 
         }
+
+        private void price_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

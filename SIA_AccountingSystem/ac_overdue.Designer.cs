@@ -36,10 +36,6 @@ namespace SIA_AccountingSystem
             this.search_box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.student_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,13 +43,17 @@ namespace SIA_AccountingSystem
             this.year_level = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.due_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -159,6 +159,69 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel4.Size = new System.Drawing.Size(883, 351);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.student_id,
+            this.full_name,
+            this.course,
+            this.year_level,
+            this.amount,
+            this.due_date});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 53);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(15, 3, 15, 10);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(853, 288);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // student_id
+            // 
+            this.student_id.HeaderText = "Student ID";
+            this.student_id.Name = "student_id";
+            this.student_id.ReadOnly = true;
+            this.student_id.Width = 200;
+            // 
+            // full_name
+            // 
+            this.full_name.HeaderText = "Full Name";
+            this.full_name.Name = "full_name";
+            this.full_name.ReadOnly = true;
+            this.full_name.Width = 200;
+            // 
+            // course
+            // 
+            this.course.HeaderText = "Course";
+            this.course.Name = "course";
+            this.course.ReadOnly = true;
+            this.course.Width = 200;
+            // 
+            // year_level
+            // 
+            this.year_level.HeaderText = "Year Level";
+            this.year_level.Name = "year_level";
+            this.year_level.ReadOnly = true;
+            this.year_level.Width = 200;
+            // 
+            // amount
+            // 
+            this.amount.HeaderText = "Amount";
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            this.amount.Width = 200;
+            // 
+            // due_date
+            // 
+            this.due_date.HeaderText = "Due Date";
+            this.due_date.Name = "due_date";
+            this.due_date.ReadOnly = true;
+            this.due_date.Width = 200;
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
@@ -223,68 +286,6 @@ namespace SIA_AccountingSystem
             this.comboBox2.Size = new System.Drawing.Size(144, 21);
             this.comboBox2.TabIndex = 2;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.student_id,
-            this.full_name,
-            this.course,
-            this.year_level,
-            this.amount,
-            this.due_date});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 53);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(15, 3, 15, 10);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(853, 288);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // student_id
-            // 
-            this.student_id.HeaderText = "Student ID";
-            this.student_id.Name = "student_id";
-            this.student_id.ReadOnly = true;
-            this.student_id.Width = 200;
-            // 
-            // full_name
-            // 
-            this.full_name.HeaderText = "Full Name";
-            this.full_name.Name = "full_name";
-            this.full_name.ReadOnly = true;
-            this.full_name.Width = 200;
-            // 
-            // course
-            // 
-            this.course.HeaderText = "Course";
-            this.course.Name = "course";
-            this.course.ReadOnly = true;
-            this.course.Width = 200;
-            // 
-            // year_level
-            // 
-            this.year_level.HeaderText = "Year Level";
-            this.year_level.Name = "year_level";
-            this.year_level.ReadOnly = true;
-            this.year_level.Width = 200;
-            // 
-            // amount
-            // 
-            this.amount.HeaderText = "Amount";
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
-            this.amount.Width = 200;
-            // 
-            // due_date
-            // 
-            this.due_date.HeaderText = "Due Date";
-            this.due_date.Name = "due_date";
-            this.due_date.ReadOnly = true;
-            this.due_date.Width = 200;
-            // 
             // ac_overdue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,9 +299,9 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

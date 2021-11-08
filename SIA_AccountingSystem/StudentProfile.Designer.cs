@@ -238,6 +238,7 @@ namespace SIA_AccountingSystem
             this.price_box.Size = new System.Drawing.Size(347, 60);
             this.price_box.TabIndex = 1;
             this.price_box.Text = "Unpaid Invoice:";
+            this.price_box.TextChanged += new System.EventHandler(this.price_box_TextChanged);
             // 
             // panel1
             // 

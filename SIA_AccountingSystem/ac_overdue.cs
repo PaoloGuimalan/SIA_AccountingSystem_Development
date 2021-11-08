@@ -76,5 +76,10 @@ namespace SIA_AccountingSystem
                 dataGridView1.Columns[i].Width = 200;
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
