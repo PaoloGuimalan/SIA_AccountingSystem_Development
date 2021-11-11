@@ -32,6 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>qculogopng.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\Bunifu_UI_v1.52.dll</HintPath>
@@ -215,6 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\17-170178_background-office-images-hd.jpg" />
+    <Content Include="qculogopng.ico" />
     <None Include="Resources\img_237553.png" />
     <None Include="Resources\outline_account_circle_black_24dp.png" />
     <None Include="Resources\743930_button_512x512.png" />

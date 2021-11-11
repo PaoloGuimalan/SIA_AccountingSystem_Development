@@ -28,7 +28,7 @@ namespace SIA_AccountingSystem
                 //dataGridView1.Rows.Add(read1.GetString(0), read1.GetString(1)+", "+read1.GetString(2)+", "+read1.GetString(3), read1.GetString(4), read1.GetString(5));
                 MySqlConnection Inpay = new MySqlConnection(conn);
                 Inpay.Open();
-                string inpay_query = $"SELECT  SUM(total) total_price FROM (SELECT SUM(unit_price) total FROM av_units WHERE unit_id IN(SELECT unit_id FROM units_assigned WHERE stud_id_units = '{read1.GetString(0)}' AND status = 'Unpaid') UNION ALL SELECT SUM(m_fee) total FROM av_miscellaneous WHERE m_id IN(SELECT misc_id FROM misc_assigned WHERE stud_id_misc = '{read1.GetString(0)}' AND status = 'Unpaid')) s";
+                string inpay_query = $"SELECT  SUM(total) total_price, (SELECT date_due FROM units_assigned WHERE stud_id_units = '{read1.GetString(0)}' GROUP BY date_due INTERSECT SELECT date_due FROM misc_assigned WHERE stud_id_misc = '{read1.GetString(0)}' GROUP BY date_due) due_date FROM (SELECT SUM(unit_price) total FROM av_units WHERE unit_id IN(SELECT unit_id FROM units_assigned WHERE stud_id_units = '{read1.GetString(0)}' AND status = 'Unpaid') UNION ALL SELECT SUM(m_fee) total FROM av_miscellaneous WHERE m_id IN(SELECT misc_id FROM misc_assigned WHERE stud_id_misc = '{read1.GetString(0)}' AND status = 'Unpaid')) s";
                 MySqlCommand commandpay = new MySqlCommand(inpay_query, Inpay);
                 MySqlDataReader readpay = commandpay.ExecuteReader();
                 while (readpay.Read())
@@ -36,7 +36,7 @@ namespace SIA_AccountingSystem
                     double payable = double.Parse(readpay.GetString(0));
                     if (payable > 0)
                     {
-                        dataGridView1.Rows.Add(read1.GetString(0), read1.GetString(1) + ", " + read1.GetString(2) + ", " + read1.GetString(3), read1.GetString(4), read1.GetString(5), payable);
+                        dataGridView1.Rows.Add(read1.GetString(0), read1.GetString(1) + ", " + read1.GetString(2) + ", " + read1.GetString(3), read1.GetString(4), read1.GetString(5), payable, readpay.GetString(1));
                     }
                 }
                 Inpay.Close();
@@ -53,6 +53,17 @@ namespace SIA_AccountingSystem
         private void Search_btn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void click_stud(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                //MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells["student_id"].FormattedValue.ToString());
+                StudentProfile stud = new StudentProfile(dataGridView1.Rows[e.RowIndex].Cells["student_id"].FormattedValue.ToString());
+                stud.Show();
+            }
         }
     }
 }

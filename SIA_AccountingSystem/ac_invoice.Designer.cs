@@ -30,6 +30,12 @@ namespace SIA_AccountingSystem
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.student_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.course = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.year_level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.due_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -41,12 +47,6 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.student_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.full_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.course = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.year_level = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.due_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -75,6 +75,49 @@ namespace SIA_AccountingSystem
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(784, 285);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.click_stud);
+            // 
+            // student_id
+            // 
+            this.student_id.HeaderText = "Student ID";
+            this.student_id.Name = "student_id";
+            this.student_id.ReadOnly = true;
+            this.student_id.Width = 200;
+            // 
+            // full_name
+            // 
+            this.full_name.HeaderText = "Full Name";
+            this.full_name.Name = "full_name";
+            this.full_name.ReadOnly = true;
+            this.full_name.Width = 200;
+            // 
+            // course
+            // 
+            this.course.HeaderText = "Course";
+            this.course.Name = "course";
+            this.course.ReadOnly = true;
+            this.course.Width = 200;
+            // 
+            // year_level
+            // 
+            this.year_level.HeaderText = "Year Level";
+            this.year_level.Name = "year_level";
+            this.year_level.ReadOnly = true;
+            this.year_level.Width = 200;
+            // 
+            // amount
+            // 
+            this.amount.HeaderText = "Amount";
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            this.amount.Width = 200;
+            // 
+            // due_date
+            // 
+            this.due_date.HeaderText = "Due Date";
+            this.due_date.Name = "due_date";
+            this.due_date.ReadOnly = true;
+            this.due_date.Width = 200;
             // 
             // tableLayoutPanel1
             // 
@@ -242,48 +285,6 @@ namespace SIA_AccountingSystem
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(144, 21);
             this.comboBox2.TabIndex = 2;
-            // 
-            // student_id
-            // 
-            this.student_id.HeaderText = "Student ID";
-            this.student_id.Name = "student_id";
-            this.student_id.ReadOnly = true;
-            this.student_id.Width = 200;
-            // 
-            // full_name
-            // 
-            this.full_name.HeaderText = "Full Name";
-            this.full_name.Name = "full_name";
-            this.full_name.ReadOnly = true;
-            this.full_name.Width = 200;
-            // 
-            // course
-            // 
-            this.course.HeaderText = "Course";
-            this.course.Name = "course";
-            this.course.ReadOnly = true;
-            this.course.Width = 200;
-            // 
-            // year_level
-            // 
-            this.year_level.HeaderText = "Year Level";
-            this.year_level.Name = "year_level";
-            this.year_level.ReadOnly = true;
-            this.year_level.Width = 200;
-            // 
-            // amount
-            // 
-            this.amount.HeaderText = "Amount";
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
-            this.amount.Width = 200;
-            // 
-            // due_date
-            // 
-            this.due_date.HeaderText = "Due Date";
-            this.due_date.Name = "due_date";
-            this.due_date.ReadOnly = true;
-            this.due_date.Width = 200;
             // 
             // ac_invoice
             // 
