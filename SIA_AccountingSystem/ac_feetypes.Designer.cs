@@ -40,6 +40,9 @@ namespace SIA_AccountingSystem
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.miscs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.course2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fee2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sub_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sub_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +51,6 @@ namespace SIA_AccountingSystem
             this.year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.course = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.miscs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.course2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fee2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -137,6 +137,7 @@ namespace SIA_AccountingSystem
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(105, 21);
             this.comboBox3.TabIndex = 3;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.sem_onchange);
             // 
             // comboBox1
             // 
@@ -153,7 +154,7 @@ namespace SIA_AccountingSystem
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(102, 21);
             this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.course_onchange);
             // 
             // comboBox2
             // 
@@ -169,6 +170,7 @@ namespace SIA_AccountingSystem
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(99, 21);
             this.comboBox2.TabIndex = 2;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.year_onchange);
             // 
             // tableLayoutPanel2
             // 
@@ -235,6 +237,27 @@ namespace SIA_AccountingSystem
             this.dataGridView2.Size = new System.Drawing.Size(377, 283);
             this.dataGridView2.TabIndex = 2;
             // 
+            // miscs
+            // 
+            this.miscs.HeaderText = "Miscellaneous";
+            this.miscs.Name = "miscs";
+            this.miscs.ReadOnly = true;
+            this.miscs.Width = 150;
+            // 
+            // course2
+            // 
+            this.course2.HeaderText = "Course";
+            this.course2.Name = "course2";
+            this.course2.ReadOnly = true;
+            this.course2.Width = 150;
+            // 
+            // fee2
+            // 
+            this.fee2.HeaderText = "Fee";
+            this.fee2.Name = "fee2";
+            this.fee2.ReadOnly = true;
+            this.fee2.Width = 150;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -297,27 +320,6 @@ namespace SIA_AccountingSystem
             this.fee.HeaderText = "Fee";
             this.fee.Name = "fee";
             this.fee.ReadOnly = true;
-            // 
-            // miscs
-            // 
-            this.miscs.HeaderText = "Miscellaneous";
-            this.miscs.Name = "miscs";
-            this.miscs.ReadOnly = true;
-            this.miscs.Width = 150;
-            // 
-            // course2
-            // 
-            this.course2.HeaderText = "Course";
-            this.course2.Name = "course2";
-            this.course2.ReadOnly = true;
-            this.course2.Width = 150;
-            // 
-            // fee2
-            // 
-            this.fee2.HeaderText = "Fee";
-            this.fee2.Name = "fee2";
-            this.fee2.ReadOnly = true;
-            this.fee2.Width = 150;
             // 
             // ac_feetypes
             // 
