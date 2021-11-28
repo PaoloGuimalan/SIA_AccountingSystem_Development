@@ -41,9 +41,6 @@ namespace SIA_AccountingSystem
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.reg_name = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.maindash1 = new SIA_AccountingSystem.Maindash();
-            this.studentLists1 = new SIA_AccountingSystem.StudentLists();
-            this.accounting1 = new SIA_AccountingSystem.Accounting();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -53,6 +50,9 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.maindash1 = new SIA_AccountingSystem.Maindash();
+            this.studentLists1 = new SIA_AccountingSystem.StudentLists();
+            this.accounting1 = new SIA_AccountingSystem.Accounting();
             this.tableLayoutPanelmain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -102,7 +102,7 @@ namespace SIA_AccountingSystem
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(172)))), ((int)(((byte)(116)))));
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.dshbrd, 0, 2);
@@ -218,34 +218,6 @@ namespace SIA_AccountingSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(436, 292);
             this.panel1.TabIndex = 1;
-            // 
-            // maindash1
-            // 
-            this.maindash1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maindash1.Location = new System.Drawing.Point(0, 0);
-            this.maindash1.Margin = new System.Windows.Forms.Padding(0);
-            this.maindash1.Name = "maindash1";
-            this.maindash1.Size = new System.Drawing.Size(436, 292);
-            this.maindash1.TabIndex = 1;
-            this.maindash1.Load += new System.EventHandler(this.maindash1_Load);
-            // 
-            // studentLists1
-            // 
-            this.studentLists1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.studentLists1.Location = new System.Drawing.Point(0, 0);
-            this.studentLists1.Margin = new System.Windows.Forms.Padding(0);
-            this.studentLists1.Name = "studentLists1";
-            this.studentLists1.Size = new System.Drawing.Size(436, 292);
-            this.studentLists1.TabIndex = 1;
-            // 
-            // accounting1
-            // 
-            this.accounting1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.accounting1.Location = new System.Drawing.Point(0, 0);
-            this.accounting1.Margin = new System.Windows.Forms.Padding(0);
-            this.accounting1.Name = "accounting1";
-            this.accounting1.Size = new System.Drawing.Size(436, 292);
-            this.accounting1.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
@@ -372,6 +344,34 @@ namespace SIA_AccountingSystem
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
+            // maindash1
+            // 
+            this.maindash1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.maindash1.Location = new System.Drawing.Point(0, 0);
+            this.maindash1.Margin = new System.Windows.Forms.Padding(0);
+            this.maindash1.Name = "maindash1";
+            this.maindash1.Size = new System.Drawing.Size(436, 292);
+            this.maindash1.TabIndex = 1;
+            this.maindash1.Load += new System.EventHandler(this.maindash1_Load);
+            // 
+            // studentLists1
+            // 
+            this.studentLists1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.studentLists1.Location = new System.Drawing.Point(0, 0);
+            this.studentLists1.Margin = new System.Windows.Forms.Padding(0);
+            this.studentLists1.Name = "studentLists1";
+            this.studentLists1.Size = new System.Drawing.Size(436, 292);
+            this.studentLists1.TabIndex = 1;
+            // 
+            // accounting1
+            // 
+            this.accounting1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.accounting1.Location = new System.Drawing.Point(0, 0);
+            this.accounting1.Margin = new System.Windows.Forms.Padding(0);
+            this.accounting1.Name = "accounting1";
+            this.accounting1.Size = new System.Drawing.Size(436, 292);
+            this.accounting1.TabIndex = 0;
             // 
             // Main
             // 
