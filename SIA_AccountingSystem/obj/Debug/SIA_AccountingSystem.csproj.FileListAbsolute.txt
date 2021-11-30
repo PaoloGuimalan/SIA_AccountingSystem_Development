@@ -91,3 +91,4 @@ C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\obj\Debug\S
 C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.ac_invoice.resources
 C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.ac_overdue.resources
 C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\obj\Debug\SIA_AccountingSystem.csproj.AssemblyReference.cache
+C:\Users\acer\source\repos\SIA_AccountingSystem\SIA_AccountingSystem\bin\Debug\Guna.UI2.dll
