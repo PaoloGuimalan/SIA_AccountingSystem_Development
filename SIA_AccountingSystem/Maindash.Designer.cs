@@ -31,8 +31,8 @@ namespace SIA_AccountingSystem
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -83,22 +83,6 @@ namespace SIA_AccountingSystem
             this.panel1.Size = new System.Drawing.Size(460, 258);
             this.panel1.TabIndex = 0;
             // 
-            // guna2CircleProgressBar1
-            // 
-            this.guna2CircleProgressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.Gray;
-            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
-            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(104, 35);
-            this.guna2CircleProgressBar1.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleProgressBar1.ShadowDecoration.Parent = this.guna2CircleProgressBar1;
-            this.guna2CircleProgressBar1.ShowPercentage = true;
-            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(252, 245);
-            this.guna2CircleProgressBar1.TabIndex = 1;
-            this.guna2CircleProgressBar1.ValueChanged += new System.EventHandler(this.guna2CircleProgressBar1_ValueChanged_1);
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -114,6 +98,28 @@ namespace SIA_AccountingSystem
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // guna2CircleProgressBar1
+            // 
+            this.guna2CircleProgressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.Gray;
+            this.guna2CircleProgressBar1.FillThickness = 15;
+            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
+            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(104, 35);
+            this.guna2CircleProgressBar1.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
+            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.Red;
+            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.Yellow;
+            this.guna2CircleProgressBar1.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
+            this.guna2CircleProgressBar1.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
+            this.guna2CircleProgressBar1.ProgressThickness = 15;
+            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleProgressBar1.ShadowDecoration.Parent = this.guna2CircleProgressBar1;
+            this.guna2CircleProgressBar1.ShowPercentage = true;
+            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(252, 245);
+            this.guna2CircleProgressBar1.TabIndex = 1;
+            this.guna2CircleProgressBar1.ValueChanged += new System.EventHandler(this.guna2CircleProgressBar1_ValueChanged_1);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -128,11 +134,12 @@ namespace SIA_AccountingSystem
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(307, 258);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -140,12 +147,12 @@ namespace SIA_AccountingSystem
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(0, 58);
+            this.label1.Location = new System.Drawing.Point(0, 74);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 22);
+            this.label1.Size = new System.Drawing.Size(108, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Unpaid Units";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -154,12 +161,12 @@ namespace SIA_AccountingSystem
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(0, 138);
+            this.label3.Location = new System.Drawing.Point(0, 134);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 22);
+            this.label3.Size = new System.Drawing.Size(177, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Unpaid Miscellaneous";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -167,26 +174,35 @@ namespace SIA_AccountingSystem
             // guna2ProgressBar1
             // 
             this.guna2ProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ProgressBar1.AutoRoundedCorners = true;
+            this.guna2ProgressBar1.BorderRadius = 8;
             this.guna2ProgressBar1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(3, 97);
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(3, 105);
             this.guna2ProgressBar1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.guna2ProgressBar1.Name = "guna2ProgressBar1";
+            this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.Red;
+            this.guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.Yellow;
+            this.guna2ProgressBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.guna2ProgressBar1.ShadowDecoration.Parent = this.guna2ProgressBar1;
             this.guna2ProgressBar1.ShowPercentage = true;
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(284, 23);
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(284, 18);
             this.guna2ProgressBar1.TabIndex = 6;
             this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
             // guna2ProgressBar2
             // 
             this.guna2ProgressBar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ProgressBar2.AutoRoundedCorners = true;
+            this.guna2ProgressBar2.BorderRadius = 8;
             this.guna2ProgressBar2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.guna2ProgressBar2.Location = new System.Drawing.Point(3, 177);
+            this.guna2ProgressBar2.Location = new System.Drawing.Point(3, 165);
             this.guna2ProgressBar2.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.guna2ProgressBar2.Name = "guna2ProgressBar2";
+            this.guna2ProgressBar2.ProgressColor = System.Drawing.Color.Red;
+            this.guna2ProgressBar2.ProgressColor2 = System.Drawing.Color.Yellow;
             this.guna2ProgressBar2.ShadowDecoration.Parent = this.guna2ProgressBar2;
             this.guna2ProgressBar2.ShowPercentage = true;
-            this.guna2ProgressBar2.Size = new System.Drawing.Size(284, 23);
+            this.guna2ProgressBar2.Size = new System.Drawing.Size(284, 18);
             this.guna2ProgressBar2.TabIndex = 7;
             this.guna2ProgressBar2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 

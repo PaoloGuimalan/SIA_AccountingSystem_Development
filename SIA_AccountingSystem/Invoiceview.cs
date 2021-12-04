@@ -239,6 +239,27 @@ namespace SIA_AccountingSystem
             Connection(value_ID2);
         }
 
+        private static Random random = new Random();
+
+        public static string RandomString()
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz";
+            return new string(Enumerable.Repeat(chars, 11)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+        private void Transaction_unit_single(string sub_code_rec)
+        {
+            DateTime dateTime = DateTime.UtcNow.Date;
+            string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
+            MySqlConnection DBConnect1 = new MySqlConnection(conn);
+            DBConnect1.Open();
+            string query1 = $"INSERT INTO transac_hist (transaction_code, unit_misc, student, registrar, date) VALUES ('{RandomString()}','{sub_code_rec}','Juan','Solomon','{dateTime.ToString("d")}')";
+            MySqlCommand command1 = new MySqlCommand(query1, DBConnect1);
+            command1.ExecuteNonQuery();
+            DBConnect1.Close();
+        }
+
         private void click_unit(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -255,6 +276,7 @@ namespace SIA_AccountingSystem
                     if (dialogResult == DialogResult.Yes)
                     {
                         Unit_Con_Single(data);
+                        Transaction_unit_single(sub_code);
                     }
                     else if (dialogResult == DialogResult.No)
                     {

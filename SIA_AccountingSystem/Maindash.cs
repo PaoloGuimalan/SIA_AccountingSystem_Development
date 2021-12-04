@@ -68,10 +68,30 @@ namespace SIA_AccountingSystem
             DBConnectmisc.Close();
         }
 
+        private void Grid_Data()
+        {
+            string conn = "datasource=localhost;port=3306;username=root;password=;SslMode=none;database=qcu_acc";
+            MySqlConnection DBConnect = new MySqlConnection(conn);
+
+            DBConnect.Open();
+
+            string query = "SELECT * FROM transac_hist";
+            MySqlCommand command1 = new MySqlCommand(query, DBConnect);
+            MySqlDataReader read1 = command1.ExecuteReader();
+
+            while (read1.Read())
+            {
+                dataGridView1.Rows.Add(read1.GetString(0), read1.GetString(1), read1.GetString(2), read1.GetString(3), read1.GetString(4));
+            }
+
+            DBConnect.Close();
+        }
+
         public Maindash()
         {
             InitializeComponent();
             Connection();
+            Grid_Data();
         }
 
         private void guna2CircleProgressBar1_ValueChanged(object sender, EventArgs e)
